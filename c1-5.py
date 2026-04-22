@@ -1,6 +1,11 @@
 name =input("enter your name")
 
-result=len(name)
-result=name.find("y")
-
+result1=len(name)
+result2=name.find("y")
+name.capitalize()
+name=name.upper()
+result=name.isdigit()
+result=name.isalpha()
+result=phone_number.count("-")
+phone_number=phone_number.replace("-","")
 print(len(name))
