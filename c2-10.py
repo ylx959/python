@@ -16,24 +16,28 @@ guesses=[]
 score=0
 question_num=0
 
-for question in questions:
-    print("-------------")
-    print(question)
-    for option in options[question_num]:
-        print(option)
-
-    guess=input("enter(A,B,C,D): ").upper()
-    guesses.append(guess)
-    if guess==answers[question_num]:
-        score+=1
-        print("correct")
-    else:
-        print("incorrect")
-        print(f"{answers[question_num]} is a correct answer")
+    for question in questions:
+        print("-------------")
+        print(question)
         
-    question_num+=1
+        for option in options[question_num]:
+            print(options[question_num])
+            
+        guess=input("enter(A,B,C,D): ").upper()
+        guesses.append(guess)
+        if guess==answers[question_num]:
+            score+=1
+            print("correct")
+        else:
+            print("incorrect")
+            print(f"{answers[question_num]} is a correct answer")
+            
+        question_num+=1
 
-if score>=3:
-    print(f"you got {score}/5,not bad")
-else:
-    print(f"you got {score}/5,please practice more")
+    print("-------------")
+    print(f"your answer:{guesses}")
+    print(f"correct answer:{answers}")
+    if score>=3:
+        print(f"you got {score}/5,not bad")
+    else:
+        print(f"you got {score}/5,please practice more")
