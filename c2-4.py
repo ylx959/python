@@ -11,13 +11,14 @@ fruits=["apple","banana","orange","coconut","pineapple"]
 
 #fruits.append("berry")
 #fruits.remove("apple")
-#fruits.insert(0,"pineapple")
+fruits.insert(0,"pineapple")
 #fruits.sort()
 #fruits.reverse()
 #fruits.clear()
 #fruits.index()
 print(fruits.index("apple"))
 print(fruits.count("banana"))
+print(fruits)
 #print("apple" in fruits)
 #for fruit in fruits:
  #   print(fruit)
