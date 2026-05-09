@@ -10,7 +10,8 @@ s=int(input("enter the time in seconds:"))
 while s>=60:
         print("it can be over 60 !")
         s=int(input("enter the time in seconds:"))
-  
+for x in range(1,4):
+     print(x)
 
 h*=3600
 m*=60
@@ -24,3 +25,4 @@ for  x in range(my_time,0,-1):
     time.sleep(1)
 
 print("Time's up?")
+

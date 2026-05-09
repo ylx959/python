@@ -1,4 +1,4 @@
-gpa=input("enter your gpa: ")
+gpa=float(input("enter your gpa: "))
+age=int(input("how old are you:"))
 
-
-print(gpa)
+item=input("what item would you like to buy: ")
