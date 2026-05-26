@@ -64,8 +64,8 @@ def main():
         play_again=input("Do you want to spin again? (Y/N): ").upper()
         if play_again !='Y':
             break
-    print("****************")
-    print("The game is over")
+    
+    print(f"Game over! Your final balance is ${balance}")
 
 
 if __name__=='__main__':
