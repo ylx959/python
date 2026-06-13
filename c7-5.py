@@ -1,4 +1,4 @@
-#magic method
+#magic method python will automatically call the function cool!!!!!!!!!!!
 
 class Book:
     def __init__(self,title,author,num_pages):
