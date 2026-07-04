@@ -12,6 +12,8 @@ fruits=[Fruit("banana",105),
         Fruit("coconut",105),
         ] 
 
-fruits=sorted(fruits,key=lambda fruit:fruit.name )
+fruits=sorted(fruits,key=lambda fruit:fruit.name,reverse=True)
+fruits=sorted(fruits,key=lambda fruit:fruit.calories)
+fruits=sorted(fruits,key=lambda fruit:fruit.calories,reverse=True )
 
 print(fruits)

@@ -1,7 +1,7 @@
 # zip() = Combines multiple iterables (lists, tuples, sets, dict)
 #             into a single iterator of tuples.
 #             Makes managing multiple indices easier.
-
+#!!!!!!! important and convenience
 
 names=["Spongebob","Patrick","Squiedward"]
 ages=[20,50,49]
