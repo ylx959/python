@@ -23,13 +23,13 @@ class Dice:
         else:
             raise StopIteration
 
-it=iter(Dice(3))
+#it=iter(Dice(3))
 
-while True:
-    try:
-        print(next(it),end=",")
-    except StopIteration:
-        break
+#while True:
+ #   try:
+  #      print(next(it),end=",")
+   # except StopIteration:
+    #    break
 
 dice=Dice(3)
 

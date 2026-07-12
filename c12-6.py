@@ -12,8 +12,8 @@ class Person:
     password: str = field(repr=False)
     is_alive: bool = True
 
-person1=Person("Spongebob",35,"pineapple")
-person2=Person("Patrick",30,"banana")
+person1=Person("Spongebob",35,"3423424","pineapple")
+person2=Person("Patrick",30,"343424","banana")
 
 print(person1)
 print(person2)

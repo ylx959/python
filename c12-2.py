@@ -7,7 +7,6 @@
 import time
 
 def count_to(n):
-    numbers=[]
     count=1
     while count<=n:
         yield count
