@@ -75,7 +75,7 @@ def display_answer(answer):
 
 def main():
     answer=random.choice(words)
-    hint=["_"]*len(answer)
+    hint=["_"]*len(answer) #用底線代表還沒猜到的字母
     wrong_guesses=0
     guessed_letters=set() #important
     is_running=True
@@ -90,14 +90,14 @@ def main():
             continue
 
         if guess in guessed_letters:
-            print(f"{guess} is alreay guessed")
+            print(f"{guess} is already guessed")
             continue
             
         guessed_letters.add(guess)
 
         if guess in answer:
             for i in range(len(answer)):
-                if answer[i] ==guess:
+                if answer[i] ==guess: #同一個字母可能出現很多次，所以全部檢查
                     hint[i]=guess
         else:
             wrong_guesses+=1
@@ -107,7 +107,7 @@ def main():
             print("you win")  
             break
 
-        if wrong_guesses>=len(hangman_art)-1:
+        if wrong_guesses>=len(hangman_art)-1: #畫完最後一張圖就結束
             print(f"Game over the answer is : {answer}")
             is_running=False
 

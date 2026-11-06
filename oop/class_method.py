@@ -6,14 +6,14 @@ class Student:
     def __init__(self,name,gpa):
         self.name=name
         self.gpa=gpa
-        Student.count+=1
+        Student.count+=1 #類別變數由所有物件共用
         Student.total_gpa+=gpa
 
 
     def get_info(self):
         return f"{self.name} :{self.gpa}"
 
-    @classmethod
+    @classmethod #cls代表類別本身，用來操作類別變數
     def get_count(cls):
         return f"Total # of students: {cls.count}"
 
@@ -26,7 +26,8 @@ class Student:
 
 student1=Student("Jack",3.65) 
 student2=Student("Jay",3.45)
-student2=Student("Jace",4.23)
+student3=Student("Jace",4.23)
 
+print(student1.get_info())
 print(Student.get_count())
 print(Student.get_average_gpa())

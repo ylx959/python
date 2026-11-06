@@ -12,13 +12,14 @@ class Animal:
         print(f"{self.name} is sleeping")
 
 
-class Dog(Animal):
+class Dog(Animal): #Dog繼承Animal的屬性和方法
     def speak(self):
-      print("woof")
+        print("woof")
     
 class Cat(Animal):
     def speak(self):
         print("meow")
+
 class Mouse(Animal):
     def speak(self):
         print("squeek")
@@ -30,4 +31,8 @@ mouse=Mouse("Lili")
 dog.speak()
 cat.speak()
 mouse.speak()
+
+dog.eat() #eat定義在父類別，子類別可以直接用
+cat.sleep()
+print(mouse.is_alive)
 

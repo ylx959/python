@@ -1,17 +1,17 @@
 #match-case like switch
 
-def day_of_week(day):
+def is_weekend(day):
     match day:
-        case "Sunday"|"Saturday":
+        case "Sunday"|"Saturday": #| 代表符合其中一個就成立
             return True
-        case "Monday"|"Tuesday"|"Wednesday"|"Thursday"|"Friday"|"Saturday"|"Sunday":
+        case "Monday"|"Tuesday"|"Wednesday"|"Thursday"|"Friday":
             return False
         case _:
             return False
         
 
 user=input("enter the day: ")
-print(day_of_week(user))
+print(is_weekend(user))
 
 
       

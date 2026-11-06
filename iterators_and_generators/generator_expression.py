@@ -7,6 +7,6 @@
 file_path="lord_of_the_rings.txt"
 
 with open(file_path) as file:
-    lines=(line.strip() for line in file)
+    lines=(line.strip() for line in file) #要在with裡面使用，離開後檔案就關閉了
     for line in lines:
         print(line)

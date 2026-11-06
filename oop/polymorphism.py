@@ -1,9 +1,10 @@
 #polymorphism
-from abc import ABC ,abstractmethod
+from abc import ABC,abstractmethod
 
 
 
-class Shape:
+class Shape(ABC):
+    @abstractmethod #子類別一定要實作area，否則不能建立物件
     def area(self):
         pass
 
@@ -26,7 +27,7 @@ class Triangle(Shape):
     def area(self):
         return self.height*self.width*0.5
 
-class Pizza(Circle):
+class Pizza(Circle): #Pizza也是Circle，所以同樣有area
     def __init__(self,topping,radius):
         super().__init__(radius)
         self.topping=topping
@@ -35,4 +36,4 @@ class Pizza(Circle):
 shapes=[Circle(4),Square(5),Triangle(6,7),Pizza("pepper",15)]
 
 for shape in shapes:
-    print(f"{shape.area()}")
+    print(f"{shape.area()}") #同一個方法，不同類別有不同結果

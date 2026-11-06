@@ -5,7 +5,7 @@
 
 class Rectangle:
     def __init__(self, width, height):
-        self._width = width
+        self._width = width #底線開頭代表內部使用
         self._height = height
 
     @property
@@ -16,7 +16,7 @@ class Rectangle:
     def height(self):
         return f"{self._height:.1f}cm"
 
-    @width.setter
+    @width.setter #設定新值時先檢查
     def width(self, new_width):
         if new_width > 0:
             self._width = new_width
@@ -30,7 +30,7 @@ class Rectangle:
         else:
             print("Height must be greater than zero")
 
-    @width.deleter
+    @width.deleter #使用del時呼叫
     def width(self):
         del self._width
         print("Width has been deleted")
@@ -46,4 +46,10 @@ print(rectangle.width)
 print(rectangle.height)
 
 rectangle.width=5
-rectangle.height=4
+rectangle.height=0 #0不合法，所以高度不會改變
+
+print(rectangle.width)
+print(rectangle.height)
+
+del rectangle.width
+del rectangle.height

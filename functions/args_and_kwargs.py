@@ -1,9 +1,10 @@
-def shipping_label(*args,**kwargs):
+def shipping_label(*args,**kwargs): #*args要寫在**kwargs前面
     for arg in args:
-        print(arg)
+        print(arg,end=" ")
     print()
-    
-    print(f"{kwargs.get('street')}")
+
+    print(f"{kwargs.get('street')} {kwargs.get('apt')}") #get找不到key時回傳None，不會報錯
+    print(f"{kwargs.get('city')},{kwargs.get('state')} {kwargs.get('zip')}")
 
 
 shipping_label("Dr.","spongebob","Squarepants","III",

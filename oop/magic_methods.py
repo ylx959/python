@@ -6,25 +6,25 @@ class Book:
         self.author=author
         self.num_pages=num_pages
 
-    def __str__(self):
+    def __str__(self): #print(物件)時呼叫
         return f"'{self.title}' by {self.author}"
 
-    def __eq__(self,other):
+    def __eq__(self,other): #使用==時呼叫
         return self.title==other.title and self.author==other.author
 
-    def __lt__(self,other):
+    def __lt__(self,other): #使用<時呼叫
         return self.num_pages<other.num_pages
 
-    def __gt__(self,other):
+    def __gt__(self,other): #使用>時呼叫
         return self.num_pages>other.num_pages
     
-    def __add__(self,other):
+    def __add__(self,other): #使用+時呼叫
         return f"{self.num_pages+other.num_pages} pages"
 
-    def __contains__(self,keyword):
+    def __contains__(self,keyword): #使用in時呼叫
         return keyword in self.title or keyword in self.author
 
-    def __getitem__(self,key):
+    def __getitem__(self,key): #使用物件[key]時呼叫
         if key=="title":
             return self.title
         elif key=="author":
@@ -32,12 +32,17 @@ class Book:
         elif key=="num_pages":
             return self.num_pages
         else:
-            return f"'Key '{key}' was not found"
+            return f"Key '{key}' was not found"
 
 book1=Book("The Hobbit","J.R.R",300)
 book2=Book("Harry Potter","JK",223)
 book3=Book("The Lion","C.S.Lewis",172)
 
+print(book1)
+print(book1==book2)
+print(book1<book2)
+print(book1>book2)
+print(book1+book2)
 print("Lion" in book3)
 print(book3['title'])
 print(book1['num_pages'])

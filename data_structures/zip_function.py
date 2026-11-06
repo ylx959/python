@@ -3,16 +3,16 @@
 #             Makes managing multiple indices easier.
 #!!!!!!! important and convenience
 
-names=["Spongebob","Patrick","Squiedward"]
+names=["Spongebob","Patrick","Squidward"]
 ages=[20,50,49]
 jobs=["cook","cashier","designer"]
 
-datas=zip(names,ages,jobs)
+datas=zip(names,ages,jobs) #zip只能走訪一次，用完就空了
 
-#datas=dict(sorted(datas.items(),key=lambda data:data[1]))
+#datas=sorted(datas,key=lambda data:data[1])
 
 for name,age,job in datas:
-    print(f"{name} is {age} years old")
+    print(f"{name} is {age} years old and works as a {job}")
 
 
 

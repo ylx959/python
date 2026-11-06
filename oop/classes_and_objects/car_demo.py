@@ -4,11 +4,11 @@
 
 # class = (blueprint) used to design the structure and layout of an object
 #oop
-from car import Car
+from car import Car #從car.py匯入Car類別
 
-car1=Car("bmw","red","2023","False")
-car2=Car("benz","white","2004","True")
-car3=Car("toyota","blue","2012","False")
+car1=Car("bmw","red","2023",False) #用類別建立物件
+car2=Car("benz","white","2004",True)
+car3=Car("toyota","blue","2012",False)
 
 
 print(car1.model)

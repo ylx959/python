@@ -14,7 +14,7 @@ cart=[]
 total=0
 print("-------MENU--------")
 for key,value in menu.items():
-    print(f"{key:10}:${value:.2f}")
+    print(f"{key:10}:${value:.2f}") #:10 讓文字佔10格，菜單才會對齊
     
 print("-------------------")
 
@@ -22,8 +22,10 @@ while True:
     food=input("Select an item(q to quit): ").lower()
     if food=="q":
         break
-    elif menu.get(food) is not None:
+    elif menu.get(food) is not None: #get找不到時回傳None
         cart.append(food)
+    else:
+        print(f"{food} is not on the menu")
 
 print("------YOUR ORDER------")
 for food in cart:

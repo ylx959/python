@@ -12,8 +12,8 @@ class Car:
     def __init__(self,make,model,horse_power,wheel_size):
         self.make=make
         self.model=model
-        self.engine=Engine(horse_power)
-        self.wheels=[Wheel(wheel_size) for wheel in range(4)]
+        self.engine=Engine(horse_power) #Car自己建立Engine，Car消失它也跟著消失
+        self.wheels=[Wheel(wheel_size) for wheel in range(4)] #建立4個輪子
     def display_car(self):
         return f"{self.make} {self.model} {self.engine.horse_power}(hp) {self.wheels[0].size} inches"
 

@@ -3,10 +3,10 @@
 #Pass the base function as an argument to the decorator
 
 def add_sprinkles(func):
-    def wrapper(*args, **kwargs):
+    def wrapper(*args, **kwargs): #wrapper包住原本的函式，並接收它的參數
         print("*You add sprinkles 🎊*")
         func(*args, **kwargs)
-    return wrapper
+    return wrapper #回傳函式本身，不是呼叫它
 
 def add_fudge(func):
     def wrapper(*args, **kwargs):
@@ -14,7 +14,7 @@ def add_fudge(func):
         func(*args, **kwargs)
     return wrapper
 
-@add_sprinkles
+@add_sprinkles #多個裝飾器時由上往下執行
 @add_fudge
 def get_ice_cream(flavor):
     print(f"Here is your {flavor} ice cream 🍨")

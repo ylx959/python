@@ -2,8 +2,8 @@
 import random
 
 def spin_row():
-    symbols=['🍒',' 🍉', '🍋','🔔','⭐️']
-    return [random.choice(symbols) for symbol in range(3)]
+    symbols=['🍒','🍉','🍋','🔔','⭐️']
+    return [random.choice(symbols) for symbol in range(3)] #隨機取3個符號
 
 def print_row(row):
     print("***********")
@@ -11,7 +11,7 @@ def print_row(row):
     print("***********")
 
 def get_payout(row,bet):
-    if row[0]==row[1]==row[2]:
+    if row[0]==row[1]==row[2]: #三個符號相同才有獎金
         if row[0]=='🍒':
             return bet*3
         elif row[0]=='🍉':
@@ -38,6 +38,8 @@ def main():
 
         if not bet.isdigit():
             print("Please enter valid number")
+            continue #輸入錯誤時回到迴圈開頭，不扣錢
+
         bet=int(bet)
 
         if bet>balance:
@@ -46,6 +48,7 @@ def main():
         
         if bet<=0:
             print("Bet must be greater than 0")
+            continue
         
         balance-=bet
 

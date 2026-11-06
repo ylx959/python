@@ -1,7 +1,7 @@
 #nested class
 class Company:
 
-    class Employee:
+    class Employee: #Employee只在Company內使用，所以寫在裡面
         def __init__(self, name, position):
             self.name = name
             self.position = position
@@ -13,7 +13,7 @@ class Company:
         self.employees = []
 
     def add_employee(self, name,position):
-        new_employee=self.Employee(name,position)
+        new_employee=self.Employee(name,position) #用self取得內部類別
         self.employees.append(new_employee)
 
     def list_employee(self):
@@ -32,6 +32,9 @@ company1.add_employee("Terry","PM")
 company2.add_employee("Jack","Designer")
 company2.add_employee("Jennie","Engineer")
 company2.add_employee("Jerry","XR Engineer")
+
+for employee in company1.list_employee():
+    print(employee)
 
 for employee in company2.list_employee():
     print(employee)

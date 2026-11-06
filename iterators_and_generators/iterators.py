@@ -11,7 +11,7 @@ import random
 class Dice:
     def __init__(self,rolls):
         self.rolls=rolls
-        self.count=0
+        self.count=0 #記住目前走到第幾次
 
     def __iter__(self):
         return self
@@ -21,7 +21,7 @@ class Dice:
             self.count+=1
             return random.randint(1,6)
         else:
-            raise StopIteration
+            raise StopIteration #告訴for迴圈已經沒有資料了
 
 #it=iter(Dice(3))
 
@@ -35,3 +35,4 @@ dice=Dice(3)
 
 for die in dice:
     print(die,end=",")
+print()

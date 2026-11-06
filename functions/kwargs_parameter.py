@@ -1,7 +1,7 @@
 #*args!!!!!!!!!!! is tuple
-#**kwargs is dictonary
+#**kwargs is dictionary
 
-def print_address(**kwargs):
+def print_address(**kwargs): #傳進來的關鍵字參數全部收進字典
     for key,value in kwargs.items():
         print(f"{key}:{value}")
 

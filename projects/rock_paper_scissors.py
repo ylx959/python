@@ -9,8 +9,8 @@ while running:
     player=None
     computer=random.choice(options)
 
-    while player not in options:
-        player=input("enter a choice(rock,paper,scissors): ")
+    while player not in options: #輸入不合法就重新輸入
+        player=input("enter a choice(rock,paper,scissors): ").lower()
 
 
     print(f"player:{player}")

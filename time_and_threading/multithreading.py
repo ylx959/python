@@ -16,8 +16,8 @@ def get_mail():
     time.sleep(4)
     print("You get the mail")
 
-chore1=threading.Thread(target=walk_dog,args=("Scooby",))
-chore1.start()
+chore1=threading.Thread(target=walk_dog,args=("Scooby",)) #args是tuple，只有一個值時要加逗號
+chore1.start() #start後在背景執行，不用等它結束
 
 chore2=threading.Thread(target=take_out_trash)
 chore2.start()
@@ -25,7 +25,7 @@ chore2.start()
 chore3=threading.Thread(target=get_mail)
 chore3.start()
 
-chore1.join()
+chore1.join() #join等待執行緒結束才往下走
 chore2.join()
 chore3.join()
 

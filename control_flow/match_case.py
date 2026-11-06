@@ -16,6 +16,8 @@ def day_of_week(day):
             return "Saturday"
         case 7:
             return "Sunday"
+        case _: #_ 代表其他所有情況，像是switch的default
+            return "Not a valid day"
 
 enter=int(input("Enter the number: "))
 print(day_of_week(enter))

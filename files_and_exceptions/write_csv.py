@@ -11,11 +11,11 @@ employees = [["Name", "Age", "Job"],
 file_path="output.csv"
 
 try:
-    with open(file_path,"w") as file:
+    with open(file_path,"w",newline="") as file: #newline=""避免多出空白行
         writer=csv.writer(file)
         for row in employees:
-            writer.writerow(row)
+            writer.writerow(row) #一次寫入一列
         print(f"csv_file {file_path} was created")
-except FileExistsError:
-    print("That file already exists !")
+except PermissionError:
+    print("you do not have permission to write that file")
 

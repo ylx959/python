@@ -1,4 +1,4 @@
-from script1 import *
+from script1 import * #import後可以直接用favorite_food
 
 def favorite_drink(drink):
     print(f"Your favorite drink is {drink}")

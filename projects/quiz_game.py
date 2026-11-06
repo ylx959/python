@@ -20,7 +20,7 @@ for question in questions:
     print("-------------")
     print(question)
     
-    for option in options[question_num]:
+    for option in options[question_num]: #question_num同時對應題目、選項和答案
          print(option)
         
     guess=input("enter(A,B,C,D): ").upper()
@@ -35,15 +35,15 @@ for question in questions:
     question_num+=1
 
 print("-------------")
-print(f"your answer: ",end="")
+print("your answer: ",end="")
 for guess in guesses:
     print(guess,end="")
 print()
-print(f"correct answer: ",end="")
+print("correct answer: ",end="")
 for answer in answers:
     print(answer,end="")
 print()
 if score>=3:
-    print(f"you got {score}/5,not bad")
+    print(f"you got {score}/{len(questions)},not bad")
 else:
-    print(f"you got {score}/5,please practice more")
+    print(f"you got {score}/{len(questions)},please practice more")

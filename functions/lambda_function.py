@@ -10,7 +10,7 @@ max_value = lambda x, y: x if x > y else y
 min_value = lambda x, y: x if x < y else y
 full_name = lambda first, last: first + " " + last
 is_even = lambda x: x % 2 == 0
-age_check = lambda age: True if age >= 18 else False
+age_check = lambda age: True if age >= 18 else False #lambda只能有一個運算式
 
 print(double(2))
 print(add(3, 4))

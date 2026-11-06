@@ -14,7 +14,6 @@ Python 學習過程的練習程式，依主題分資料夾，每個檔案以內�
 | `files_and_exceptions/` | 例外處理、讀寫 txt / json / csv |
 | `iterators_and_generators/` | 迭代器、產生器 |
 | `time_and_threading/` | 計時、日期時間、多執行緒 |
-| `pyqt/` | PyQt5 視窗元件、數位時鐘 |
 | `projects/` | 小專案：hangman、拉霸機、銀行程式等 |
 
 ## 環境需求
@@ -55,7 +54,6 @@ deactivate
 pip install -r requirements.txt
 ```
 
-- `PyQt5`：`pyqt/` 裡的視窗介面
 - `requests`：`projects/pokemon_api.py` 的網路請求
 
 其他程式只用到 Python 內建模組。
@@ -69,7 +67,7 @@ cd data_structures
 python list_methods.py
 ```
 
-讀寫檔案的程式（例如 `read_txt.py`、`write_csv.py`）和 `pyqt_image.py` 使用相對路徑，要在程式所在的資料夾執行才找得到檔案。
+讀寫檔案的程式（例如 `read_txt.py`、`write_csv.py`）使用相對路徑，要在程式所在的資料夾執行才找得到檔案。
 
 
 

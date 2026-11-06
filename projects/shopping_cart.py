@@ -9,7 +9,7 @@ while True:
         break
     else:
         price=int(input(f"Enter the price of a {food}: $"))
-        foods.append(food)
+        foods.append(food) #foods和prices用相同索引對應
         prices.append(price)
 
 
@@ -21,9 +21,6 @@ print("----YOUR CART-----")
 for food in foods:
     print(f"{food} ", end="")
 print()
-
-for price in prices:
-    total+=price
 
 print(f"The total price is {total}")
 

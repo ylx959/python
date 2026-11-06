@@ -1,11 +1,6 @@
 import random
 # ●┌ ─ ┐ │ └ ┘
 
-"┌──────────┐"
-"│          │"
-"│          │"
-"│          │"
-"└──────────┘"
 dice_art={
     1:("┌──────────┐",
        "│          │",
@@ -17,11 +12,11 @@ dice_art={
        "│          │",
        "│     ●    │",
        "└──────────┘"),
-    3:("┌─────────┐",
-       "│    ●    │",
-       "│    ●    │",
-       "│    ●    │",
-       "└─────────┘"),
+    3:("┌──────────┐",
+       "│     ●    │",
+       "│     ●    │",
+       "│     ●    │",
+       "└──────────┘"),
     4:("┌──────────┐",
        "│  ●    ●  │",
        "│          │",
@@ -43,13 +38,13 @@ total=0
 
 num_of_dice=int(input("how many dice: "))
 
-for die in range(num_of_dice) :
+for die in range(num_of_dice):
     dice.append(random.randint(1,6))
 
 #for die in range(num_of_dice):
    # for line in dice_art.get(dice[die]):
        # print(line)
-for line in range(5):
+for line in range(5): #一行一行印，骰子才會橫向排列
     for die in dice:
         print(dice_art.get(die)[line],end="")
     print()

@@ -1,8 +1,8 @@
 def add(x,y):
     z=x+y
-    return z
+    return z #return之後函式就結束了
 
-def substract(x,y):
+def subtract(x,y):
     z=x-y
     return z
 
@@ -16,3 +16,6 @@ def divide(x,y):
 
 
 print(add(1,2))
+print(subtract(1,2))
+print(multiply(1,2))
+print(divide(1,2))

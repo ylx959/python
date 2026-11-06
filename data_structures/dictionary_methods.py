@@ -26,5 +26,5 @@ capitals={"USA":"washington D.C.",
 
 #for value in capitals.values():
     #print(value)
-for key,value in capitals.items():
+for key,value in capitals.items(): #items()同時取出key和value
     print(f"{key}:{value}")

@@ -46,9 +46,9 @@ def main():
         if choice=='1':
             show_balance(balance)
         elif choice=='2':
-            balance+=deposit()
+            balance+=deposit() #輸入無效時回傳0，餘額不變
         elif choice=='3':
-            balance-=withdraw(balance)
+            balance-=withdraw(balance) #把餘額傳進去檢查夠不夠
         elif choice=='4':
             is_running=False
         else:

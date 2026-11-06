@@ -5,13 +5,13 @@
 class Library:
     def __init__(self,name):
         self.name=name
-        self.books=[]
+        self.books=[] #Library只保存Book，Book可以獨立存在
     
     def add_book(self,book):
         self.books.append(book)
     
     def list_book(self):
-        return [f"{book.name} by {book.author}" for book in self.books]
+        return [f"{book.name} by {book.author}" for book in self.books] #用list comprehension整理所有書
 
 class Book:
     def __init__(self,name,author):
@@ -19,7 +19,7 @@ class Book:
         self.author=author
     
 library=Library("New York Public Library")
-book1= Book("Harry Potter"," JK Rowling")
+book1 = Book("Harry Potter", "JK Rowling")
 book2 = Book("The Lord of the Rings", "J.R.R. Tolkien")
 book3 = Book("The Hobbit", "J.R.R. Tolkien")
 book4 = Book("1984", "George Orwell")

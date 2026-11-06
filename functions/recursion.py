@@ -6,34 +6,35 @@
 
 
 # ITERATIVE
-def walk(steps):
+def walk_iterative(steps):
     for step in range(1, steps+1):
         print(f"You take step #{step}")
 
 # RECURSIVE
-def walk(steps):
-    if steps == 0:
+def walk_recursive(steps):
+    if steps == 0: #終止條件，沒有它就會無限呼叫
         return
-    walk(steps - 1)
+    walk_recursive(steps - 1)
     print(f"You take step #{steps}")
 
-walk(100)
+walk_iterative(5)
+walk_recursive(5)
 
 # ----- EXAMPLE 2 -----
 
 # ITERATIVE
-def factorial(x):
+def factorial_iterative(x):
     result = 1
-    if x > 0:
-        for i in range(1, x + 1):
-            result *= i
-        return result
+    for i in range(1, x + 1):
+        result *= i
+    return result
 
 # RECURSIVE
-def factorial(x):
-    if x == 1:
+def factorial_recursive(x):
+    if x <= 1: #0和1的階乘都是1
         return 1
     else:
-        return x * factorial(x - 1)
+        return x * factorial_recursive(x - 1)
 
-print(factorial(10))
+print(factorial_iterative(10))
+print(factorial_recursive(10))
