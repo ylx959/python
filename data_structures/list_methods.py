@@ -7,7 +7,7 @@ fruits=["apple","banana","orange","coconut","pineapple"]
 
 #print(dir(fruits))
 #print(help(fruits))
-#print(len(fruits))
+print(len(fruits))
 
 #fruits.append("berry")
 #fruits.remove("apple")
